@@ -43,6 +43,12 @@ variable "subnet_id" {
   default     = null
 }
 
+variable "associate_with_subnet" {
+  type        = bool
+  description = "Whether to associate this NSG with the subnet"
+  default     = true
+}
+
 variable "tags" {
   type        = map(string)
   description = "Tags to be assigned to the NSG"

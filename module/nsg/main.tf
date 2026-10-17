@@ -51,7 +51,7 @@ resource "azurerm_network_security_rule" "allow_https" {
 }
 
 resource "azurerm_subnet_network_security_group_association" "this" {
-  count                     = var.subnet_id != null ? 1 : 0
+  count                     = var.associate_with_subnet ? 1 : 0
   subnet_id                 = var.subnet_id
   network_security_group_id = azurerm_network_security_group.this.id
 }

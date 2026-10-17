@@ -33,11 +33,8 @@ resource "azurerm_linux_virtual_machine" "this" {
     }
   }
 
-  dynamic "boot_diagnostics" {
-    for_each = var.storage_account_uri != null ? [1] : []
-    content {
-      storage_account_uri = var.storage_account_uri
-    }
+  boot_diagnostics {
+    storage_account_uri = var.storage_account_uri
   }
 
   tags = var.tags
