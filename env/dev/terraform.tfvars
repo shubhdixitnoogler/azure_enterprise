@@ -1,7 +1,7 @@
 environment         = "dev"
 location            = "eastus"
 resource_group_name = "rg-enterprise-dev-eastus"
-vm_size             = "Standard_B1s"
+vm_size             = "Standard_D2als_v7"
 admin_username      = "azureuser"
 admin_password      = "P@ssw0rdEnterprise2026!"
 enable_bastion      = false

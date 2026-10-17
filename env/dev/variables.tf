@@ -31,7 +31,7 @@ variable "vm_subnet_prefixes" {
 variable "vm_size" {
   type        = string
   description = "Size of the VM"
-  default     = "Standard_B1s"
+  default     = "Standard_D2als_v7"
 }
 
 variable "admin_username" {
